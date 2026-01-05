@@ -47,6 +47,116 @@
     margin-top: 10px;
 }
 
+/* ===== Places You May Like ===== */
+.places-like {
+    padding: 50px 60px;
+}
+
+.places-like .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.places-like .more-link {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: 600;
+}
+
+/* Grid Layout */
+
+.places-like .scroll-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 columns */
+    
+    
+    gap: 24px;
+}
+
+/* Card */
+.like-card {
+    height: 360px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.like-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.like-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.like-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Heart icon */
+.like-card .heart {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.95);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Bottom info */
+.like-card .card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    color: white;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.2),
+        transparent
+    );
+}
+
+.like-card h4 {
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+.like-card .rating {
+    font-size: 13px;
+    opacity: 0.9;
+}
+.like-card .badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #ff5a5f;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+
 /* ===== Sections ===== */
 section {
     padding: 50px 60px;
@@ -143,4 +253,3 @@ section {
 .type-card h4 {
     margin-top: 10px;
 }
-
