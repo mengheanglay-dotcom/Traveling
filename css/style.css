@@ -11,7 +11,15 @@
     background: url('https://media.istockphoto.com/id/504122496/photo/angkor-wat.jpg?s=2048x2048&w=is&k=20&c=2gcuUms8NOzyFdkm7QxhLzkjqUhJHys8p8ES_XHqxuA=') center/cover no-repeat;
     color: white;
 }
-
+button{
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    color:white;
+    background-color: rgba(0, 0, 255, 0.729);
+    border-radius: 100px;
+    border: none;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
