@@ -8,18 +8,32 @@
 /* ===== Header ===== */
 .head {
     height: 70vh;
-    background: url('https://media.istockphoto.com/id/504122496/photo/angkor-wat.jpg?s=2048x2048&w=is&k=20&c=2gcuUms8NOzyFdkm7QxhLzkjqUhJHys8p8ES_XHqxuA=') center/cover no-repeat;
+    background-image: url('https://media.istockphoto.com/id/504122496/photo/angkor-wat.jpg?s=612x612&w=0&k=20&c=NKBzgWKQPLdeRQ6l_TZLPB2Of2QVqn_N2bV0cr8hIyE=');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
 }
-button{
-    font-size: 15px;
-    width: 100px;
-    height: 35px;
+
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    background: rgb(27, 27, 237);
     color:white;
-    background-color: rgba(0, 0, 255, 0.729);
     border-radius: 100px;
-    border: none;
+    text-decoration: none;
+    font-weight: 200;
+    cursor: pointer;
 }
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -31,6 +45,7 @@ button{
     font-size: 24px;
 }
 
+
 .nav-menu {
     list-style: none;
     display: flex;
@@ -40,7 +55,13 @@ button{
 .nav-menu a {
     color: white;
     text-decoration: none;
+    font-size: 20px;
 }
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
 
 .head-text {
     text-align: center;
@@ -77,9 +98,10 @@ button{
 
 .places-like .scroll-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 columns */
-    
-    
+    grid-template-columns: repeat(4, 1fr);
+    /* 3 columns */
+
+
     gap: 24px;
 }
 
@@ -134,12 +156,10 @@ button{
     width: 100%;
     padding: 16px;
     color: white;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.75),
-        rgba(0, 0, 0, 0.2),
-        transparent
-    );
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.2),
+            transparent);
 }
 
 .like-card h4 {
@@ -151,6 +171,7 @@ button{
     font-size: 13px;
     opacity: 0.9;
 }
+
 .like-card .badge {
     position: absolute;
     top: 14px;
@@ -251,6 +272,7 @@ section {
     min-width: 260px;
 }
 
+/* Footer */
 .type-card>img {
     width: 100%;
     height: 170px;
@@ -260,4 +282,206 @@ section {
 
 .type-card h4 {
     margin-top: 10px;
+}
+
+.site-footer {
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 50px 20px 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #cbd5f5;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #60a5fa;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 20px;
+    color: #cbd5f5;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #60a5fa;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #1e293b;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+
+
+/* ===============================
+   iPhone 14 Plus (430px) Responsive
+   =============================== */
+@media (max-width: 430px) {
+
+    /* ===== General ===== */
+    body {
+        font-size: 14px;
+    }
+
+    /* ===== Header & Navbar ===== */
+    header.head {
+        padding: 16px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-menu li a {
+        font-size: 20px;
+        padding: 6px 10px;
+        display: block;
+    }
+
+    /* ===== Header Text ===== */
+    .head-text h1 {
+        font-size: 26px;
+    }
+
+    .head-text p {
+        font-size: 14px;
+    }
+
+    /* ===== Explore Places ===== */
+    .small-card {
+        min-width: 180px;
+    }
+
+    .small-card img {
+        height: 120px;
+    }
+
+    .small-card h4 {
+        font-size: 14px;
+    }
+
+    .small-card span {
+        font-size: 12px;
+    }
+
+    /* ===== Trending Destinations ===== */
+    .big-card {
+        min-width: 300px;
+        height: 200px;
+        border-radius: 16px;
+    }
+
+    .overlay h3 {
+        font-size: 18px;
+    }
+
+    .overlay p {
+        font-size: 13px;
+    }
+
+    .overlay span {
+        font-size: 12px;
+    }
+
+    /* ===== Property Types ===== */
+    .type-card {
+        min-width: 160px;
+    }
+
+    .type-card img {
+        height: 120px;
+        border-radius: 14px;
+    }
+
+    .type-card h4 {
+        font-size: 14px;
+    }
+
+    /* ===== Footer ===== */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-col h3,
+    .footer-col h4 {
+        font-size: 18px;
+    }
+
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 13px;
+        padding: 12px;
+    }
 }

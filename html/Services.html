@@ -1,22 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
+<style>
+  /* Services Section */
+  .services {
+    padding: 80px 0;
+    font-family: "Google Sans", sans-serif;
+  }
+
+  .service-card .icon {
+    font-size: 48px;
+    /* color: #0017c3; */
+    margin-bottom: 20px;
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .services-header h1 {
+    font-size: 42px;
+    color: #0017c3;
+  }
+
+  .services-header p {
+    color: #555;
+  }
+
+  /* Services Grid */
+  .services-container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  /* Service Card */
+  .service-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .service-card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    margin-bottom: 10px;
+    /* color: #0017c3; */
+  }
+
+  .service-card p {
+    color: #555;
+    line-height: 1.5;
+  }
+</style>
+
 <body>
-    <!-- ===== Header ===== -->
+  <!-- ===== Header ===== -->
   <header class="head">
     <nav class="navbar">
-      <h2 class="logo">TRAVELING</h2>
+      <h2 class="logo"><a href="/index.html" style="text-decoration: none; color: white;">TRAVELGO</a></h2>
       <ul class="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/html/Home.html">Home</a></li>
+        <li><a href="/html/About.html">About</a></li>
+        <li><a href="/html/Services.html">Services</a></li>
+        <li><a href="/html/Contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -25,5 +93,99 @@
       <p>Explore famous places, culture, and travel stories around the world</p>
     </div>
   </header>
+
+  <!-- ===== Services Section ===== -->
+
+  <section>
+    <div class="services-container">
+
+      <div class="service-card">
+        <span class="material-icons icon">flight_takeoff</span>
+        <h3>Flight Booking</h3>
+        <p>Book affordable and convenient flights to destinations around the world.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="material-icons icon">hotel</span>
+        <h3>Hotel Reservation</h3>
+        <p>Find and reserve comfortable hotels at the best prices.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="material-icons icon">explore</span>
+        <h3>Tour Packages</h3>
+        <p>Customized travel packages designed to suit your budget and interests.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="material-icons icon">directions_car</span>
+        <h3>Car Rental</h3>
+        <p>Easy and reliable car rental services for your travel convenience.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="material-icons icon">verified_user</span>
+        <h3>Travel Insurance</h3>
+        <p>Stay protected with our comprehensive travel insurance plans.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="material-icons icon">photo_camera</span>
+        <h3>Travel Photography</h3>
+        <p>Capture unforgettable moments with professional travel photography.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Brand -->
+      <div class="footer-col">
+        <h3>TravelGo 🌍</h3>
+        <p>Discover beautiful places around the world and plan your next unforgettable journey.</p>
+      </div>
+
+      <!-- Explore -->
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Trending Destinations</a></li>
+          <li><a href="#">Places You May Like</a></li>
+          <li><a href="#">Popular Cities</a></li>
+          <li><a href="#">Travel Guides</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Terms & Privacy</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="social-links">
+        <a href="#"><span class="material-icons">language</span></a>
+        <a href="#"><span class="material-icons">facebook</span></a>
+        <a href="#"><span class="material-icons">photo_camera</span></a>
+        <a href="#"><span class="material-icons">alternate_email</span></a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 TravelGo. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
+
 </html>

@@ -1,22 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+<style>
+  /* Contact Section */
+  .contact {
+    padding: 80px 0;
+    font-family: "Google Sans", sans-serif;
+  }
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .contact-header h1 {
+    font-size: 42px;
+    color: #0017c3;
+  }
+
+  .contact-header p {
+    color: #555;
+  }
+
+  /* Layout */
+  .contact-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 50px;
+  }
+
+  /* Contact Info */
+  .contact-info {
+    flex: 1;
+  }
+
+  .contact-info h2 {
+    margin-bottom: 10px;
+  }
+
+  .contact-info p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+
+  .info-item {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .contact-social a {
+    margin-right: 15px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 40px;
+    border-radius: 15px;
+  }
+
+  .contact-form h2 {
+    margin-bottom: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #0017c3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
 <body>
-     <!-- ===== Header ===== -->
+  <!-- ===== Header ===== -->
   <header class="head">
     <nav class="navbar">
-      <h2 class="logo">TRAVELING</h2>
+      <h2 class="logo"><a href="/index.html" style="text-decoration: none; color: white;">TRAVELGO</a></h2>
       <ul class="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/html/About.html">About</a></li>
+        <li><a href="/html/Services.html">Services</a></li>
+        <li><a href="/html/Contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -25,5 +114,103 @@
       <p>Explore famous places, culture, and travel stories around the world</p>
     </div>
   </header>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact">
+
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p>Have questions or need help planning your trip? Get in touch with us!</p>
+    </div>
+
+    <div class="contact-container">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>We are here to help you plan your perfect journey.</p>
+
+        <div class="info-item">
+          📍 <span>Phnom Penh, Cambodia</span>
+        </div>
+        <div class="info-item">
+          📞 <span>+855 12 345 678</span>
+        </div>
+        <div class="info-item">
+          ✉️ <span>travelgo@gmail.com</span>
+        </div>
+
+        <div class="contact-social">
+          <a href="#">🌐</a>
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+          <a href="#">✉️</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Message</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject">
+          <textarea rows="5" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Brand -->
+      <div class="footer-col">
+        <h3>TravelGo 🌍</h3>
+        <p>Discover beautiful places around the world and plan your next unforgettable journey.</p>
+      </div>
+
+      <!-- Explore -->
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Trending Destinations</a></li>
+          <li><a href="#">Places You May Like</a></li>
+          <li><a href="#">Popular Cities</a></li>
+          <li><a href="#">Travel Guides</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Terms & Privacy</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="social-links">
+        <a href="#"><span class="material-icons">language</span></a>
+        <a href="#"><span class="material-icons">facebook</span></a>
+        <a href="#"><span class="material-icons">photo_camera</span></a>
+        <a href="#"><span class="material-icons">alternate_email</span></a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 TravelGo. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
+
 </html>
