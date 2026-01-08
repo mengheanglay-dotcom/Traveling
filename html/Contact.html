@@ -94,6 +94,188 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+  /* ===== Mobile (iPhone 14 Plus) ===== */
+
+  @media (max-width: 430px) {
+
+    /* ===== Global ===== */
+    body {
+      font-size: 14px;
+    }
+
+    .navbar {
+      flex-wrap: wrap;
+      /* allow wrap instead of overflow */
+      padding: 12px 14px;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .nav-menu {
+      display: flex;
+      /* keep menu visible */
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      /* wrap items to next line */
+      gap: 12px;
+    }
+
+    .nav-menu li a {
+      font-size: 14px;
+      padding: 6px 10px;
+      display: block;
+    }
+
+    section {
+      padding: 24px 16px;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+
+  @media (max-width: 430px) {
+
+    /* Contact Section */
+    .contact {
+      padding: 40px 16px;
+      /* reduce padding */
+    }
+
+    .contact-header h1 {
+      font-size: 26px;
+      /* smaller title */
+    }
+
+    .contact-header p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Layout */
+    .contact-container {
+      flex-direction: column;
+      /* stack vertically */
+      gap: 24px;
+      /* reduce space between sections */
+      width: 100%;
+      /* full width */
+      margin: 0 auto;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      flex: none;
+      text-align: center;
+      /* center text */
+    }
+
+    .contact-info h2 {
+      font-size: 20px;
+    }
+
+    .contact-info p,
+    .info-item {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .contact-social a {
+      font-size: 18px;
+      margin-right: 12px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      flex: none;
+      padding: 24px;
+      /* reduce padding */
+    }
+
+    .contact-form h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      /* smaller padding */
+      font-size: 14px;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+
+  /* ===== Footer ===== */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+
+
+  @media (max-width: 430px) {
+
+    /* ===== Existing Mobile Styles ===== */
+    body {
+      font-size: 14px;
+    }
+
+    /* ... your other mobile styles ... */
+
+    /* ===== Footer ===== */
+    .site-footer,
+    .footer-container,
+    .footer-col,
+    .footer-col ul,
+    .footer-bottom {
+      text-align: center;
+    }
+
+    .social-links {
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .footer-col ul {
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      display: inline-block;
+      margin: 0 8px 10px;
+    }
+  }
 </style>
 
 <body>

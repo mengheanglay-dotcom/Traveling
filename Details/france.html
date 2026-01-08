@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo | France</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* ===== Travel Section ===== */
+        .travel-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .travel-header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
+
+        .travel-header p {
+            color: #6b7280;
+            max-width: 720px;
+            line-height: 1.7;
+        }
+
+        /* ===== Card Layout ===== */
+        .travel-card {
+            background: #ffffff;
+            border-radius: 20px;
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ===== Info Panel ===== */
+        .info-panel {
+            width: 35%;
+            border-right: 1px solid #e5e7eb;
+            padding-right: 25px;
+        }
+
+        .review-box h2 {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin: 0;
+        }
+
+        .bar {
+            height: 10px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        }
+
+        .w-85 {
+            width: 85%;
+        }
+
+        .w-70 {
+            width: 70%;
+        }
+
+        .w-15 {
+            width: 15%;
+        }
+
+        /* ===== Gallery ===== */
+        .gallery-panel {
+            width: 65%;
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .gallery-panel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gallery-card {
+            min-width: 230px;
+            background: #f9fafb;
+            border-radius: 14px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 14px 14px 0 0;
+        }
+
+        .gallery-card .content {
+            padding: 12px;
+        }
+
+        .gallery-card h4 {
+            margin: 0 0 6px;
+        }
+
+        .gallery-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-6px);
+        }
+
+        /* ===== iPhone 14 Plus & Mobile ===== */
+
+
+        @media (max-width: 430px) {
+
+            /* ===== Global ===== */
+            body {
+                font-size: 14px;
+            }
+
+            .navbar {
+                flex-wrap: wrap;
+                /* allow wrap instead of overflow */
+                padding: 12px 14px;
+                gap: 10px;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .nav-menu {
+                display: flex;
+                /* keep menu visible */
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                /* wrap items to next line */
+                gap: 12px;
+            }
+
+            .nav-menu li a {
+                font-size: 14px;
+                padding: 6px 10px;
+                display: block;
+            }
+
+            section {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .travel-section {
+                padding: 50px 15px;
+            }
+
+            .travel-header h1 {
+                font-size: 2rem;
+            }
+
+            .travel-card {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .info-panel {
+                width: 100%;
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 1px solid #e5e7eb;
+                padding-bottom: 20px;
+            }
+
+            .gallery-panel {
+                width: 100%;
+                padding-top: 20px;
+            }
+
+            .gallery-card {
+                min-width: 260px;
+            }
+        }
+        @media (max-width: 430px) {
+    /* ===== Existing Mobile Styles ===== */
+    body {
+        font-size: 14px;
+    }
+
+    /* ... your other mobile styles ... */
+
+    /* ===== Footer ===== */
+    .site-footer,
+    .footer-container,
+    .footer-col,
+    .footer-col ul,
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 16px;
+    }
+
+    .footer-col ul {
+        padding: 0;
+    }
+
+    .footer-col ul li {
+        display: inline-block;
+        margin: 0 8px 10px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="head">
+        <nav class="navbar">
+            <h2 class="logo">
+                <a href="/index.html" style="text-decoration:none;color:white;">TRAVELGO</a>
+            </h2>
+            <ul class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/html/About.html">About</a></li>
+                <li><a href="/html/Services.html">Services</a></li>
+                <li><a href="/html/Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="head-text">
+            <h1>Blog & Article</h1>
+            <p>Explore famous places, culture, and travel stories around the world</p>
+        </div>
+    </header>
+
+    <!-- ===== FRANCE SECTION ===== -->
+    <section class="travel-section">
+
+        <div class="travel-header">
+            <h1>Explore France 🇫🇷</h1>
+            <p>
+                France is a world-famous destination known for its romantic cities,
+                iconic landmarks, rich history, fine cuisine, and breathtaking landscapes.
+                From Paris to the French Riviera, France offers unforgettable experiences.
+            </p>
+        </div>
+
+        <div class="travel-card">
+
+            <!-- LEFT INFO -->
+            <div class="info-panel">
+                <h3>📍 France</h3>
+                <p>📞 +33 1 42 68 53 00</p>
+
+                <div class="review-box">
+                    <h2>4.8</h2>
+                    <span>(4,512 traveler reviews)</span>
+
+                    <div class="rating-item">
+                        <label>Excellent</label>
+                        <div class="bar">
+                            <div class="fill w-85"></div>
+                        </div>
+                    </div>
+
+                    <div class="rating-item">
+                        <label>Very Good</label>
+                        <div class="bar">
+                            <div class="fill w-70"></div>
+                        </div>
+                    </div>
+
+                    <div class="rating-item">
+                        <label>Low</label>
+                        <div class="bar">
+                            <div class="fill w-15"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT GALLERY -->
+            <div class="gallery-panel">
+
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+                    <div class="content">
+                        <h4>Eiffel Tower</h4>
+                        <p>The iconic symbol of Paris and France.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1549144511-f099e773c147">
+                    <div class="content">
+                        <h4>Louvre Museum</h4>
+                        <p>Home to the Mona Lisa and world art treasures.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+                    <div class="content">
+                        <h4>Nice</h4>
+                        <p>Beautiful beaches on the French Riviera.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba">
+                    <div class="content">
+                        <h4>Mont Saint-Michel</h4>
+                        <p>A magical island commune in Normandy.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+                    <div class="content">
+                        <h4>Provence</h4>
+                        <p>Lavender fields and charming countryside.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>TravelGo 🌍</h3>
+                <p>Your trusted guide to explore France and the world.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Trending Destinations</a></li>
+                    <li><a href="#">Travel Guides</a></li>
+                    <li><a href="#">Popular Cities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms & Privacy</a></li>
+                </ul>
+            </div>
+
+            <div class="social-links">
+                <a href="#"><span class="material-icons">facebook</span></a>
+                <a href="#"><span class="material-icons">photo_camera</span></a>
+                <a href="#"><span class="material-icons">alternate_email</span></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TravelGo. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

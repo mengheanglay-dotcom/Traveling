@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<style>
+    /* SECTION */
+    .travel-section {
+        max-width: 1200px;
+        margin: auto;
+        padding: 60px 20px;
+    }
+
+    /* HEADER */
+    .travel-header {
+        margin-bottom: 40px;
+    }
+
+    .travel-header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+    }
+
+    .travel-header p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        max-width: 700px;
+    }
+
+    /* CARD */
+    .travel-card {
+        background: #ffffff;
+        border-radius: 18px;
+        display: flex;
+        gap: 30px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    /* LEFT PANEL */
+    .info-panel {
+        width: 35%;
+        border-right: 1px solid #e5e7eb;
+        padding-right: 25px;
+    }
+
+    .contact {
+        color: #2563eb;
+        font-weight: 500;
+    }
+
+    .review-box {
+        margin-top: 30px;
+    }
+
+    .review-box h2 {
+        font-size: 2.4rem;
+        color: #16a34a;
+        margin: 0;
+    }
+
+    .rating-item {
+        margin-top: 12px;
+    }
+
+    .bar {
+        width: 100%;
+        height: 10px;
+        background: #e5e7eb;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .fill {
+        height: 100%;
+        background: linear-gradient(90deg, #22c55e, #4ade80);
+    }
+
+    .w-80 {
+        width: 80%;
+    }
+
+    .w-60 {
+        width: 60%;
+    }
+
+    .w-20 {
+        width: 20%;
+    }
+
+    /* RIGHT GALLERY */
+    .gallery-panel {
+        width: 65%;
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery-card {
+        min-width: 220px;
+        background: #f9fafb;
+        border-radius: 14px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 14px 14px 0 0;
+    }
+
+    .gallery-card h4 {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .gallery-card:hover {
+        transform: translateY(-6px);
+    }
+
+    /* ===== Mobile (iPhone 14 Plus) ===== */
+
+    @media (max-width: 430px) {
+
+        /* ===== Global ===== */
+        body {
+            font-size: 14px;
+        }
+
+        .navbar {
+            flex-wrap: wrap;
+            /* allow wrap instead of overflow */
+            padding: 12px 14px;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            /* keep menu visible */
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* wrap items to next line */
+            gap: 12px;
+        }
+
+        .nav-menu li a {
+            font-size: 14px;
+            padding: 6px 10px;
+            display: block;
+        }
+
+        section {
+            padding: 24px 16px;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .travel-card {
+            flex-direction: column;
+        }
+
+        .info-panel {
+            width: 100%;
+            border-right: none;
+            padding-right: 0;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 20px;
+        }
+
+        .gallery-panel {
+            width: 100%;
+            padding-top: 15px;
+        }
+
+        .gallery-card {
+            min-width: 260px;
+        }
+    }
+
+    @media (max-width: 430px) {
+
+        /* ===== Existing Mobile Styles ===== */
+        body {
+            font-size: 14px;
+        }
+
+        /* ... your other mobile styles ... */
+
+        /* ===== Footer ===== */
+        .site-footer,
+        .footer-container,
+        .footer-col,
+        .footer-col ul,
+        .footer-bottom {
+            text-align: center;
+        }
+
+        .social-links {
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .footer-col ul {
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            display: inline-block;
+            margin: 0 8px 10px;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="head">
+        <nav class="navbar">
+            <h2 class="logo"><a href="/index.html" style="text-decoration: none; color: white;">TRAVELGO</a></h2>
+            <ul class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/html/About.html">About</a></li>
+                <li><a href="/html/Services.html">Services</a></li>
+                <li><a href="/html/Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="head-text">
+            <h1>Blog & Article</h1>
+            <p>Explore famous places, culture, and travel stories around the world</p>
+        </div>
+
+    </header>
+
+    <section class="travel-section">
+
+        <header class="travel-header">
+            <h1>Explore China 🇨🇳</h1>
+            <p>
+                Explore ancient civilizations, modern megacities,
+                breathtaking landscapes, and rich cultural heritage.
+            </p>
+        </header>
+
+        <div class="travel-card">
+
+            <!-- LEFT INFO -->
+            <div class="info-panel">
+                <h3>📍 China</h3>
+                <p class="contact">📞 +86 10 1234 5678</p>
+
+                <div class="review-box">
+                    <h2>4.7</h2>
+                    <span>(6,324 reviews)</span>
+
+                    <div class="rating-bars">
+                        <div class="rating-item">
+                            <label>Excellent</label>
+                            <div class="bar">
+                                <div class="fill w-80"></div>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <label>Very Good</label>
+                            <div class="bar">
+                                <div class="fill w-60"></div>
+                            </div>
+                        </div>
+                        <div class="rating-item">
+                            <label>Low</label>
+                            <div class="bar">
+                                <div class="fill w-20"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT GALLERY -->
+            <div class="gallery-panel">
+
+                <div class="gallery-card">
+                    <img src="https://www.popsci.com/wp-content/uploads/2025/02/Great-Wall-China.jpg?quality=85&w=2000">
+                    <h4>Great Wall of China</h4>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn4dkD1g9K7S7slL4tBBs7fBMI_ZnDqcumMQ&s">
+                    <h4>Shanghai</h4>
+                </div>
+
+                <div class="gallery-card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyqSpBW5AqICWh5rcIVqQVP13YPLw7I9tnHQ&s">
+                    <h4>Forbidden City</h4>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGE9aq07kQxdd5uedcAhs8bt3Vhq_6ssN7-A&s">
+                    <h4>Guilin & Li River</h4>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://oneplanetjourney.com/wp-content/uploads/2024/11/Terracotta-Warriors-OPJ-1024x768.jpg
+                    ">
+                    <h4>Terracotta Army</h4>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-col">
+                <h3>TravelGo 🌍</h3>
+                <p>Discover beautiful places around the world and plan your next unforgettable journey.</p>
+            </div>
+
+            <!-- Explore -->
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Trending Destinations</a></li>
+                    <li><a href="#">Places You May Like</a></li>
+                    <li><a href="#">Popular Cities</a></li>
+                    <li><a href="#">Travel Guides</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms & Privacy</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="social-links">
+                <a href="#"><span class="material-icons">language</span></a>
+                <a href="#"><span class="material-icons">facebook</span></a>
+                <a href="#"><span class="material-icons">photo_camera</span></a>
+                <a href="#"><span class="material-icons">alternate_email</span></a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TravelGo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+
+
+</html>
